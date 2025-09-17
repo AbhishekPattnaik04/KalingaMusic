@@ -1,18 +1,21 @@
-name: Cache Maven Dependencies
+name: Resuable child
 
 on:
-  workflow_call:
+  workflow_call:                          
     inputs:
-      env:
+      env:                                
         type: string
+        description: "Environment variable passed from parent workflow"
+
 jobs:
   reusablejob:
     runs-on: windows-latest
 
     steps:
-      # Step 1: Checkout the repository
+
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: display env
-        run: echo "environment is ${{ inputs.env }}"
+
+      - name: Display Environment
+        run: echo "Environment is ${{ inputs.env }}"
