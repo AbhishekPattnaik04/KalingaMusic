@@ -23,7 +23,8 @@ jobs:
       - name: Display Environment
         run: echo "Environment is ${{ inputs.env }}"
 
-      - id: displayEnv
+      - name: DisplayOutput
+        id: displayEnv
         run: echo "message2=Environment is ${{ inputs.env }}" >> $GITHUB_OUTPUT    
 
       - name: print output
