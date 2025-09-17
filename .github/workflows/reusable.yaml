@@ -25,3 +25,6 @@ jobs:
 
       - id: displayEnv
         run: echo "message=Environment is ${{ inputs.env }}" >> $GITHUB_OUTPUT    
+
+      - name: print output
+        run: ${{ steps.displayEnv.outputs.message }}  
