@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
 
     outputs:                     
-      message: ${{ steps.displayEnv.outputs.message }}
+      message: ${{ steps.displayEnv.outputs.message2 }}
 
     steps:
 
@@ -24,7 +24,7 @@ jobs:
         run: echo "Environment is ${{ inputs.env }}"
 
       - id: displayEnv
-        run: echo "message=Environment is ${{ inputs.env }}" >> $GITHUB_OUTPUT    
+        run: echo "message2=Environment is ${{ inputs.env }}" >> $GITHUB_OUTPUT    
 
       - name: print output
-        run: echo "${{ steps.displayEnv.outputs.message }}"  
+        run: echo "${{ steps.displayEnv.outputs.message2 }}"  
