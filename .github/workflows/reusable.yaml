@@ -6,7 +6,9 @@ on:
       env:                                
         type: string
         description: "Environment variable passed from parent workflow"
-
+    outputs:
+      result:
+        value: ${{ jobs.reusablejob.outputs.message}
 jobs:
   reusablejob:
     runs-on: ubuntu-latest

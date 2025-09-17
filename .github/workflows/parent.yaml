@@ -20,4 +20,4 @@ jobs:
     steps:
 
       - name: Display Output from Reusable Workflow
-        run: echo "Output from reusable workflow is ${{ needs.reusablejob.outputs.message }}"      
+        run: echo "Output from reusable workflow is ${{ needs.reusablejob.outputs.result }}"      
