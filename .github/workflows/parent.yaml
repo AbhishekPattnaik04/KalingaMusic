@@ -2,13 +2,14 @@ name: Cache Maven Dependencies
 
 on:
   workflow_dispatch:
-   inputs:
-     env:
-      type: string
+    inputs:
+      env: 
+        type: string
+        description: 'Environment variable to pass to the reusable workflow'
+        required: true
 
 jobs:
   reusablejob:
     uses: ./.github/workflows/reusable.yaml
     with:
-       env: ${{ github.event.inputs.env }}
-
+      env: ${{ github.event.inputs.env }}
