@@ -1,4 +1,4 @@
-name: Cache Maven Dependencies
+name: Resuable parent
 
 on:
   workflow_dispatch:
