@@ -1,0 +1,14 @@
+name: Cache Maven Dependencies
+
+on:
+  workflow_dispactch:
+   inputs:
+     env:
+      type: string
+
+jobs:
+  reusablejob:
+    uses: ./.github/workflows/reusable.yaml
+    with:
+       env: ${{ github.event.inputs.env }}
+

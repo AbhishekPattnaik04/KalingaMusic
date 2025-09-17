@@ -1,0 +1,18 @@
+name: Cache Maven Dependencies
+
+on:
+  workflow_call:
+    inputs:
+      env:
+        type: string
+jobs:
+  reusablejob:
+    runs-on: windows-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: display env
+        run: echo "environment is ${{ github.event.inputs.env }}"
