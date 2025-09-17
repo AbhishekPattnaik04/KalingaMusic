@@ -9,7 +9,7 @@ on:
 
 jobs:
   reusablejob:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     outputs:                     
       message: ${{ steps.displayEnv.outputs.message2 }}
