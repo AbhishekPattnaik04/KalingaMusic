@@ -24,4 +24,4 @@ jobs:
         run: echo "Environment is ${{ inputs.env }}"
 
       - id: displayEnv
-        run: echo "Environment is ${{ inputs.env }}" && echo "::set-output name=message::Environment is ${{ inputs.env }}"        
+        run: echo "message=Environment is ${{ inputs.env }}" >> $GITHUB_OUTPUT    
