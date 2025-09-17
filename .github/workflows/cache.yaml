@@ -1,9 +1,7 @@
 name: Cache Maven Dependencies
 
-# on:
-#   push:
-#     branches:
-#       - '**'
+on:
+  workflow_dispatch:
 
 jobs:
   cachejob:
