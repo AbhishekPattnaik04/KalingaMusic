@@ -11,6 +11,9 @@ jobs:
   reusablejob:
     runs-on: windows-latest
 
+    outputs:                     
+      resultMessage: ${{ steps.displayEnv.outputs.message }}
+
     steps:
 
       - name: Checkout Repository
@@ -19,3 +22,6 @@ jobs:
 
       - name: Display Environment
         run: echo "Environment is ${{ inputs.env }}"
+
+      - id: displayEnv
+        run: echo "Environment is ${{ inputs.env }}" && echo "::set-output name=message::Environment is ${{ inputs.env }}"        

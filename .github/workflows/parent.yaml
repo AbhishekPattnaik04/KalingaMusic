@@ -13,3 +13,11 @@ jobs:
     uses: ./.github/workflows/reusable.yaml
     with:
       env: ${{ github.event.inputs.env }}
+
+  displayOutput:
+    needs: reusablejob             
+    runs-on: windows-latest                 
+    steps:
+
+      - name: Display Output from Reusable Workflow
+        run: echo "Output from reusable workflow is ${{ needs.reusablejob.outputs.resultMessage }}"      
